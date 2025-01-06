@@ -1,37 +1,120 @@
 /*CSS Reset*/
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  * {
-    margin: 0;
-  }
-  
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
+  box-sizing: border-box;
+}
 
-  #root, #__next {
-    isolation: isolate;
-  }
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+/*END OF RESET*/
+
+body {
+  background-image: url(./img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  color: white;
+  padding-left: 40px;
+  padding-top: 40px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+  height: 70vh;
+  max-width: 500px;
+  min-width: 500px; 
+
+  border-radius: 0.5rem;
+ 
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+}
+
+#searchbar {
+  height: 50px;
+  width: 400px;
+  border-radius: 2rem;
+  border: none;
+  background-color: transparent;
+  padding-left: 24px;
+  font-size: 22px;
+  width: 100%;
+  color: white;
+}
+
+#searchbar:focus {
+  outline: none;
+}
+
+.weather-display {
+  border: 1px solid orange;
+  height: 100%;
+}
+
+.location {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.search-container {
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 12px;
+  border: 1px solid white;
+}
+
+#searchbar::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.search-btn {
+  border: none;
+  background-color: inherit;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.search-btn:hover #search-icon {
+  height: 28px;
+}
+#search-icon {
+  height: 32px;
+  transition: height 0.1s ease-in-out;
+  filter: invert(1);
+}
