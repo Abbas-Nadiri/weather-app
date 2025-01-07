@@ -1,6 +1,7 @@
 import './styles.css';
 
 const searchBtn = document.querySelector('.search-btn');
+const input = document.querySelector('#searchbar');
 const key = 'UH2A8AY7KYVYU3DUFPWKY6DGM';
 
 const locationDisplay = document.querySelector('.location');
@@ -11,7 +12,6 @@ const humidityDisplay = document.querySelector('.humidity');
 const windspeedDisplay = document.querySelector('.windspeed');
 
 searchBtn.addEventListener('click', () => {
-  const input = document.querySelector('#searchbar');
   let location = input.value;
   let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${key}`;
 
@@ -56,3 +56,9 @@ function convertUnits(temp) {
   temp = ((temp - 32) * 5) / 9;
   return temp.toFixed(1);
 }
+
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    searchBtn.click();
+  }
+});
