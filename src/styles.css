@@ -52,7 +52,7 @@ body {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.container {
+.container {  
   height: 70vh;
   max-width: 500px;
   min-width: 500px; 
@@ -82,7 +82,6 @@ body {
 }
 
 .weather-display {
-  border: 1px solid orange;
   height: 100%;
 }
 
